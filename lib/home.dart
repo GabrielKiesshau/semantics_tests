@@ -3,7 +3,7 @@ import 'package:semantics_tests/page_builder_test.dart';
 import 'package:semantics_tests/page_test.dart';
 
 class HomePage extends StatefulWidget {
-  const HomePage({super.key, required this.title});
+  const HomePage({Key key, @required this.title}) : super(key: key);
 
   final String title;
 

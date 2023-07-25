@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
 class PageViewExample extends StatelessWidget {
-  const PageViewExample({super.key});
+  const PageViewExample({Key key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
