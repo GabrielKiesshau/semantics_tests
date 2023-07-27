@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:semantics_tests/hello.dart';
 import 'package:semantics_tests/page_builder_test.dart';
 import 'package:semantics_tests/page_test.dart';
 
@@ -13,20 +14,19 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  
   static const List<Widget> _widgetOptions = <Widget>[
     ColoredBox(
-      color: Colors.amber,
+      color: Colors.orange,
       child: PageViewExample(),
     ),
     ColoredBox(
       color: Colors.lime,
       child: PageViewBuilderExample(),
     ),
-    Text(
-      'Index 2: School',
-      style: optionStyle,
+    ColoredBox(
+      color: Colors.cyan,
+      child: Hello(),
     ),
   ];
 
@@ -57,7 +57,7 @@ class _HomePageState extends State<HomePage> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.school),
-            label: 'School',
+            label: 'Hello',
           ),
         ],
         currentIndex: _selectedIndex,

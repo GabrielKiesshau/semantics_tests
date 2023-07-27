@@ -21,6 +21,7 @@ class PageViewBuilderExample extends StatelessWidget {
 
     return PageView.builder(
       controller: controller,
+      
       itemBuilder: (context, index) {
         return pages[index];
       },
