@@ -21,15 +21,18 @@ class Hello extends StatelessWidget {
             const SizedBox(height: 13),
             Semantics(
               container: true,
-              child: const ListTile(
-                leading: Icon(
+              child: ListTile(
+                leading: const Icon(
                   Icons.calendar_month,
                 ),
-                title: Text(
-                  '3',
-                  semanticsLabel: '4',
+                title: Semantics(
+                  label: 'a',
+                  child: const Text(
+                    '3',
+                    semanticsLabel: '4',
+                  ),
                 ),
-                subtitle: Text(
+                subtitle: const Text(
                   '5',
                   semanticsLabel: '6',
                 ),
