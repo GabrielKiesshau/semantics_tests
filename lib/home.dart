@@ -15,18 +15,23 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   int _selectedIndex = 0;
   
-  static const List<Widget> _widgetOptions = <Widget>[
-    ColoredBox(
+  static final List<Widget> _widgetOptions = <Widget>[
+    const ColoredBox(
       color: Colors.orange,
       child: PageViewExample(),
     ),
-    ColoredBox(
+    const ColoredBox(
       color: Colors.lime,
       child: PageViewBuilderExample(),
     ),
     ColoredBox(
       color: Colors.cyan,
-      child: Hello(),
+      child: Column(
+        children: const [
+          Hello(),
+          Hello(),
+        ],
+      ),
     ),
   ];
 
