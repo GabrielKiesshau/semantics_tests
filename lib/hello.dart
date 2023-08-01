@@ -22,8 +22,12 @@ class Hello extends StatelessWidget {
             Semantics(
               container: true,
               child: ListTile(
-                leading: const Icon(
-                  Icons.calendar_month,
+                leading: IconButton(
+                  onPressed: () => debugPrint('a'),
+                  icon: const Icon(
+                    Icons.calendar_month,
+                    semanticLabel: 'teste',
+                  ),
                 ),
                 title: Semantics(
                   label: 'a',

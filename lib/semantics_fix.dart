@@ -16,15 +16,8 @@ class SemanticsFix extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Positioned(
-          top: 0,
-          bottom: 0,
-          left: 0,
-          right: 0,
-          child: Container(
-            color: Colors.amber,
-            child: Semantics(label: _semanticsLabel),
-          ),
+        Positioned.fill(
+          child: Semantics(label: _semanticsLabel),
         ),
         _child,
       ],
